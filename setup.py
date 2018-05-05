@@ -7,7 +7,7 @@ def readme():
         return f.read()
 
 setup(name='cabot-alert-rocketchat',
-      version='0.0.2',
+      version='0.1.0',
       description='A RocketChat alert plugin for Cabot',
       long_description=readme(),
       license='MIT',
