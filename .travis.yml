@@ -8,7 +8,7 @@ cache: pip
 install:
   - pip install .
 # Test
-
+script: true
 # Deploy
 deploy:
   provider: pypi
