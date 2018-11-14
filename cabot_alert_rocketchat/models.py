@@ -74,7 +74,8 @@ class RocketchatAlert(AlertPlugin):
     def _send_rocketchat_alert(self, attachments, context):
         payload = {}
         payload['attachments'] = attachments
-        payload['text'] = '*Service "%s"*' % (context.get('service').name)
+        # Showing Alert Message in Mobile Notification Bar with Status
+        payload['text'] = '*Service "%s" %s *' % ((context.get('service').name), (context.get('service').overall_status))
         payload['parse'] = 'none'
         payload['username'] = context.get('username')
         payload['channel'] = context.get('channel')
